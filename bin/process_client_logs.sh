@@ -7,5 +7,5 @@ sourceDirectory=$1
 cd "$sourceDirectory" || exit
 
 # cat name* outputs the content of all files that start with 'name'
-# The output of cat is piped to 
-cat secure* |
+# The output of cat is piped to awk for filtering
+cat secure* | awk '/.*Failed password for.*/ { print;}'
