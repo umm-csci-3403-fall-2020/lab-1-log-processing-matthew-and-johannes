@@ -8,4 +8,4 @@ cd "$sourceDirectory" || exit
 
 # cat name* outputs the content of all files that start with 'name'
 # The output of cat is piped to 
-cat secure* | awk '/.*Failed password for.*/ { print;}'
+cat secure* |
