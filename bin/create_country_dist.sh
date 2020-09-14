@@ -13,7 +13,7 @@ join -o 2.2 - etc/country_IP_map.txt | sort |
 
 # Use uniq with count option (-c) to count the number of occurances of each country
 # Use awk to print this data into the appropriate fields of the country_dist.html file
-uniq -c | awk '/.*/ {print "data.addRow([\x27"$2"\x27, "$1"]);"}' > ./data/country_dist_mid.html
+uniq -c | awk '/.*/ {print "data.addRow([\x27"$2"\x27, "$1"]);"}' > "$1"/country_dist_mid.html
 
 # Wrap contents with a header and footer using the wrap_contents.sh script
-./bin/wrap_contents.sh ./data/country_dist_mid.html ./html_components/country_dist "$1"/country_dist.html
+./bin/wrap_contents.sh "$1"/country_dist_mid.html ./html_components/country_dist "$1"/country_dist.html
