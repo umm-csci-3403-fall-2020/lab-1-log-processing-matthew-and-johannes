@@ -23,3 +23,6 @@ done
 ./bin/assemble_report.sh "$temp"
 
 mv "$temp"/failed_login_summary.html "$current"
+
+# Remove the temporary directory we created
+rm -r "$temp"*
