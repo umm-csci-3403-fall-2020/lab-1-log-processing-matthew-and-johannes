@@ -4,7 +4,6 @@ temp=$(mktemp -d)
 
 current=$(pwd)
 
-mkdir -p "$temp"/data
 for var in "$@"
 do
 	# The directory we'll create to store the unzipped files
